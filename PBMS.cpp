@@ -35,8 +35,8 @@ struct Node {
 vector<Candidate> candidates;
 vector<Student> students;
 
-Node* voteHead = nullptr;
-Node* voteTail = nullptr;
+Node* voteHead = NULL;
+Node* voteTail = NULL;
 
 bool isVotingOpen = false;
 bool isVotingEnded = false;
@@ -73,7 +73,6 @@ bool adminLogin() {
 void registerCandidate() {
     Candidate c;
     cout << "Enter candidate name: ";
-    cin.ignore();
     cin>>c.name;
     cout << "Enter candidate symbol: ";
     cin>>c.symbol;
@@ -102,7 +101,6 @@ bool isStudentAlreadyRegistered(const string &rollNo) {
 void registerStudent() {
     Student s;
     cout << "Enter student name: ";
-    cin.ignore();
     cin>>s.name;
     cout << "Enter roll number: ";
     cin>>s.rollNo;
@@ -142,7 +140,6 @@ void castVote() {
 
     string inputName, inputRoll;
     cout << "\n--- Voter Authentication ---\n";
-    cin.ignore();
     cout << "Enter your name: ";
     cin>>inputName;
     cout << "Enter your roll number: ";
